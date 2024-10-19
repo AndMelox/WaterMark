@@ -60,11 +60,14 @@ All these variables can be input directly by running the commands from the `coma
    cd image-watermarking
 
 
+2. It is required that both the client index and the dashboard index are run on different ports to avoid conflicts. Each should be executed in a separate folder outside of the main project for better organization and isolation.
+
 ## Authors
 
-<img alt="GitHub" src="https://img.shields.io/badge/GitHub-@AndMelox-181717?style=flat-square&logo=github"> 
-<img alt="GitHub" src="https://img.shields.io/badge/GitHub-@sebastian11020-181717?style=flat-square&logo=github">
-<img alt="GitHub" src="https://img.shields.io/badge/GitHub-@SamVargasGit-181717?style=flat-square&logo=github">
+[<img alt="GitHub" src="https://img.shields.io/badge/GitHub-@AndMelox-181717?style=flat-square&logo=github">](https://github.com/AndMelox)  
+[<img alt="GitHub" src="https://img.shields.io/badge/GitHub-@sebastian11020-181717?style=flat-square&logo=github">](https://github.com/sebastian11020)  
+[<img alt="GitHub" src="https://img.shields.io/badge/GitHub-@SamVargasGit-181717?style=flat-square&logo=github">](https://github.com/SamVargasGit)
+
 
 ## 🔗 Contact Links
 
