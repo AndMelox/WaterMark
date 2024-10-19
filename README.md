@@ -2,6 +2,10 @@
 
 This project allows users to upload images and apply a watermark to them using a Node.js server. The server handles file uploads, processes the image, and returns the watermarked image to the client.
 
+-- Se Recomienda manejar 2 puertos distintos en el index dashboard como en el index client
+lo comandos con variables de entorno  esta en el archivo "comandos.txt", recuerda cambiar las ips a los respectivos de el cliente y del usuario
+ y el comando de el dispositivo con Docker es "docker build -t marcaagua ./marcaagua"
+ recuerda que este archivo tener el nombre del archivo marcaagua en minuscula , y de igual manera el nombdre de la imagen de esta carpeta 
 ## Features
 
 - Upload images in various formats (JPEG, PNG, BMP, TIFF).

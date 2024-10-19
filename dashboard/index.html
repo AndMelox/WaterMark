@@ -58,8 +58,7 @@
         const loadingIndicator = document.getElementById('loading');
         const chartInstances = {}; 
 
-        // Configuración de la variable de entorno
-        const SERVER_URL = 'http://localhost:7000'; // Cambia esto según tu entorno.
+        const SERVER_URL = 'http://192.168.2.168:7000';
 
         const colors = [
             'rgba(255, 99, 132, 1)',
@@ -71,7 +70,7 @@
         ];
 
         async function fetchInstances() {
-            loadingIndicator.style.display = 'block'; // Muestra el indicador de carga
+            loadingIndicator.style.display = 'block';
             try {
                 const response = await fetch(`${SERVER_URL}/instances`);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -82,12 +81,12 @@
                 console.error('Error fetching instances:', error);
                 instanceList.innerHTML = '<li>Error al cargar instancias</li>';
             } finally {
-                loadingIndicator.style.display = 'none'; // Oculta el indicador de carga
+                loadingIndicator.style.display = 'none';
             }
         }
 
         async function fetchHealthHistory(instances) {
-            loadingIndicator.style.display = 'block'; // Muestra el indicador de carga
+            loadingIndicator.style.display = 'block';
             try {
                 const response = await fetch(`${SERVER_URL}/health-history`);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -170,31 +169,31 @@
                 console.error('Error fetching health history:', error);
                 chartsContainer.innerHTML = '<p>Error al cargar gráficos de salud</p>';
             } finally {
-                loadingIndicator.style.display = 'none'; // Oculta el indicador de carga
+                loadingIndicator.style.display = 'none';
             }
         }
 
         document.getElementById('createInstanceButton').addEventListener('click', async () => {
-            loadingIndicator.style.display = 'block'; // Muestra el indicador de carga
+            loadingIndicator.style.display = 'block';
             try {
                 await fetch(`${SERVER_URL}/create-instance`, { method: 'POST' });
                 fetchInstances();
             } catch (error) {
                 console.error('Error creating instance:', error);
             } finally {
-                loadingIndicator.style.display = 'none'; // Oculta el indicador de carga
+                loadingIndicator.style.display = 'none';
             }
         });
 
         document.getElementById('chaosEngineeringButton').addEventListener('click', async () => {
-            loadingIndicator.style.display = 'block'; // Muestra el indicador de carga
+            loadingIndicator.style.display = 'block';
             try {
                 await fetch(`${SERVER_URL}/chaos-engineering`, { method: 'POST' });
                 fetchInstances();
             } catch (error) {
                 console.error('Error triggering chaos engineering:', error);
             } finally {
-                loadingIndicator.style.display = 'none'; // Oculta el indicador de carga
+                loadingIndicator.style.display = 'none';
             }
         });
 

@@ -16,12 +16,10 @@ const IP_ADDRESS = process.env.IP_ADDRESS;
 let instances = [];
 let currentIndex = 0;
 
-// Crear la carpeta de logs si no existe
 if (!fs.existsSync('logs')) {
     fs.mkdirSync('logs');
 }
 
-// Configuración de winston para los logs
 const logger = winston.createLogger({
     level: 'info',
     format: winston.format.json(),

@@ -23,12 +23,10 @@ let instances = [];
 let instancesCount = 0;
 let healthHistory = {};
 
-// Crear la carpeta de logs si no existe
 if (!fs.existsSync('logs')) {
     fs.mkdirSync('logs');
 }
 
-// Configuración de winston para los logs
 const logger = winston.createLogger({
     level: 'info',
     format: winston.format.json(),

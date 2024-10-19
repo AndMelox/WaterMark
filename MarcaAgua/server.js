@@ -60,7 +60,7 @@ app.post('/upload', async (req, res) => {
         const standardHeight = 600;
         image.resize(standardWidth, standardHeight);
 
-        const watermarkWidth = image.bitmap.width * 0.1; // Ajusta el factor de escala según sea necesario
+        const watermarkWidth = image.bitmap.width * 0.1;
         watermark.resize(watermarkWidth, Jimp.AUTO);
 
         const x = image.bitmap.width - watermark.bitmap.width - 10; 
