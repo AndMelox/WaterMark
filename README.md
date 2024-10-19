@@ -2,10 +2,36 @@
 
 This project allows users to upload images and apply a watermark to them using a Node.js server. The server handles file uploads, processes the image, and returns the watermarked image to the client.
 
--- Se Recomienda manejar 2 puertos distintos en el index dashboard como en el index client
-lo comandos con variables de entorno  esta en el archivo "comandos.txt", recuerda cambiar las ips a los respectivos de el cliente y del usuario
- y el comando de el dispositivo con Docker es "docker build -t marcaagua ./marcaagua"
- recuerda que este archivo tener el nombre del archivo marcaagua en minuscula , y de igual manera el nombdre de la imagen de esta carpeta 
+## Requirements
+
+- Node.js (version 14 or higher)
+- Docker
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file:
+
+### Discovery
+`DISCOVERY_SERVICE_URL=http://192.168.2.194:6000`
+`LOAD_BALANCER_URL=http://192.168.2.194:4000`
+`MONITORING_SERVICE_URL=http://192.168.2.194:7000`
+`IP_ADDRESS=192.168.2.194`
+`SERVER_PORT=6000`
+
+### Middleware
+`DISCOVERY_SERVICE_URL=http://192.168.2.194:6000`
+`IP_ADDRESS=192.168.2.194`
+`PORT=4000`
+
+### Dashboard
+`SERVER_PORT=7000`
+`BASE_PORT=5000`
+`DISCOVERY_SERVICE_URL=http://192.168.2.194:6000`
+`HEALTH_CHECK_TIMEOUT=30000`
+`HEALTH_CHECK_INTERVAL=5000`
+`DOCKER_IMAGE_NAME=marcaagua`
+`IP_ADDRESS=192.168.2.168`
+
 ## Features
 
 - Upload images in various formats (JPEG, PNG, BMP, TIFF).
@@ -29,3 +55,4 @@ lo comandos con variables de entorno  esta en el archivo "comandos.txt", recuerd
    ```bash
    git clone https://github.com/yourusername/image-watermarking.git
    cd image-watermarking
+   
